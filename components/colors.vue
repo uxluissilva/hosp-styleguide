@@ -5,12 +5,38 @@
     <titleComponent>
       <span slot="title">Colors</span>
     </titleComponent>
-    <div class="container wrap">
-      <div class="box-colors text-center container column align-items-center" v-for="x in colors">
-        <div class="box" :style="{ background: x.hex }"></div>
-        <div class="text">
-          <strong>{{x.name}}</strong>
-          <p><small>{{x.hex}}</small></p>
+    <div class="container column">
+      
+      <h3 class="sub-title">Cores primárias</h3>
+      <div class="container wrap">
+        <div class="box-colors text-center container column align-items-center" v-for="x in colors.primary">
+          <div class="box" :style="{ background: x.hex }"></div>
+          <div class="text">
+            <strong>{{x.name}}</strong>
+            <p><small>{{x.hex}}</small></p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Cores secundárias</h3>
+      <div class="container wrap">
+        <div class="box-colors text-center container column align-items-center" v-for="x in colors.secondary">
+          <div class="box" :style="{ background: x.hex }"></div>
+          <div class="text">
+            <strong>{{x.name}}</strong>
+            <p><small>{{x.hex}}</small></p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Cores complementares</h3>
+      <div class="container wrap">  
+        <div class="box-colors text-center container column align-items-center" v-for="x in colors.complement">
+          <div class="box" :style="{ background: x.hex }"></div>
+          <div class="text">
+            <strong>{{x.name}}</strong>
+            <p><small>{{x.hex}}</small></p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,35 +86,66 @@ export default {
   name: 'colors',
   data() {
     return {
-      colors: [{
+      colors: {
+        primary: [
+          {
           name: 'Primary',
-          hex: '#50fa7b'
-        },
-        {
-          name: 'Danger',
-          hex: '#f2405d'
-        },
-        {
-          name: 'Warning',
-          hex: '#ffb721'
-        },
-        {
-          name: 'Black',
-          hex: '#000000'
-        },
-        {
-          name: 'Grey',
-          hex: '#b3b3b3'
-        },
-        {
-          name: 'Light grey',
-          hex: '#e2e2e2'
-        },
-        {
-          name: 'White',
-          hex: '#ffffff'
-        }
-      ],
+          hex: '#3f51b5'
+          },
+          {
+            name: 'Primary light',
+            hex: '#757de8'
+          },
+          {
+            name: 'Primary dark',
+            hex: '#002984'
+          }
+        ],
+        secondary: [
+          {
+          name: 'Secondary',
+          hex: '#b0bec5'
+          },
+          {
+            name: 'Secondary light',
+            hex: '#e2f1f8'
+          },
+          {
+            name: 'Secondary dark',
+            hex: '#808e95'
+          }
+        ],
+        complement: [
+          {
+          name: 'Complete',
+          hex: '#219653'
+          },
+          {
+            name: 'Danger',
+            hex: '#eb5757'
+          },
+          {
+            name: 'Warning',
+            hex: '#f2c94c'
+          },
+          {
+            name: 'Alert',
+            hex: '#f2994a'
+          },
+          {
+            name: 'Dark',
+            hex: '#4f4f4f'
+          },
+          {
+            name: 'Grey',
+            hex: '#e1e2e1'
+          },
+          {
+            name: 'White',
+            hex: '#f2f2f2'
+          }
+        ]
+      },
       shadows: [{
           name: 'Small',
           size: 10,
@@ -107,18 +164,18 @@ export default {
       ],
       gradients: [{
           name: 'Primary',
-          color: '#50fa7b',
-          color2: '#457250'
+          color: '#757de8',
+          color2: '#002984'
         },
         {
           name: 'Dark',
-          color: '#484747',
+          color: '#4f4f4f',
           color2: '#000000'
         },
         {
           name: 'Light',
-          color: '#dddddd',
-          color2: '#cccccc'
+          color: '#e2f1f8',
+          color2: '#808e95'
         }
       ]
     }

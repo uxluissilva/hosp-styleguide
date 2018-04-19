@@ -92,13 +92,13 @@ export default {
     margin-bottom: 20px;
     .bspace {
         margin-bottom: 5px;
-        border-left: 2px solid #50fa7b;
+        border-left: 2px solid #2BDBFF;
         font-size: 14px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
     .bspace.space {
-        border-right: 2px solid #50fa7b;
+        border-right: 2px solid #2BDBFF;
     }
 }
 </style>

@@ -9,7 +9,7 @@
       <div class="font-example container wrap">
         <div class="flex-basis-100 flex-grow-1">
           <ul class="list-none">
-            <li><strong>Font family:</strong> Circular Std</li>
+            <li><strong>Font family:</strong> Arial</li>
             <li><strong>Styles:</strong></li>
           </ul>
         </div>
@@ -18,9 +18,9 @@
             <li>
               <p class="font-regular">Regular</p>
             </li>
-            <li>
+            <!-- <li>
               <p class="font-light">Light</p>
-            </li>
+            </li> -->
             <li>
               <p class="font-italic">Italic</p>
             </li>
@@ -35,15 +35,15 @@
         <div class="flex-basis-400 flex-grow-3 container wrap justify-content-center align-items-center">
           <div class="flex-basis-200 flex-grow-1">
             <h1 class="font-regular">Aa</h1>
-            <h5 class="font-regular">Circular Std Regular</h5>
+            <h5 class="font-regular">Arial Regular</h5>
           </div>
           <div class="flex-basis-200 flex-grow-1">
             <h1 class="font-italic">Aa</h1>
-            <h5 class="font-italic">Circular Std Italic</h5>
+            <h5 class="font-italic">Arial Italic</h5>
           </div>
           <div class="flex-basis-200 flex-grow-1">
             <h1 class="font-bold">Aa</h1>
-            <h5 class="font-bold">Circular Std Bold</h5>
+            <h5 class="font-bold">Arial Bold</h5>
           </div>
         </div>
       </div>
@@ -60,8 +60,8 @@
           <ul class="list-none">
             <li>
               <h4>Heading 1</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
-            <li><strong>Font size:</strong> 55px</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
+            <li><strong>Font size:</strong> 44px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -73,8 +73,8 @@
           <ul class="list-none">
             <li>
               <h4>Heading 2</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
-            <li><strong>Font size:</strong> 55px</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
+            <li><strong>Font size:</strong> 36px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -86,8 +86,8 @@
           <ul class="list-none">
             <li>
               <h4>Heading 3</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
-            <li><strong>Font size:</strong> 55px</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
+            <li><strong>Font size:</strong> 24px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -99,8 +99,8 @@
           <ul class="list-none">
             <li>
               <h4>Heading 4</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
-            <li><strong>Font size:</strong> 22px</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
+            <li><strong>Font size:</strong> 18px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -112,8 +112,8 @@
           <ul class="list-none">
             <li>
               <h4>Heading 5</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
-            <li><strong>Font size:</strong> 18px</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
+            <li><strong>Font size:</strong> 16px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -125,7 +125,7 @@
           <ul class="list-none">
             <li>
               <h4>Heading 6</h4></li>
-            <li><strong>Font family:</strong> Circular Std</li>
+            <li><strong>Font family:</strong> {{text.font.primary}}</li>
             <li><strong>Font size:</strong> 14px</li>
           </ul>
         </div>
@@ -242,7 +242,14 @@ export default {
     titleComponent
   },
   data() {
-    return {}
+    return {
+      text: {
+        font: {
+          primary: "Arial",
+          secondary: "sans-serif"
+        }
+      }
+    }
   }
 }
 </script>

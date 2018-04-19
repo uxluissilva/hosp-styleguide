@@ -4,9 +4,9 @@
   <header>
     <div class="header container column align-items-center justify-content-center">
       <div class="block text-center">
-        <img src="~/assets/images/logo1.svg" class="logo" alt="">
+        <img src="~/assets/images/logo-benner.svg" class="logo" alt="">
         <p>
-          <blockquote>"We’re not designing pages, we’re designing systems of components."<span> -Stephen Hay</span></blockquote>
+          <blockquote>Styleguide do produto <strong>Hospitalar</strong> para maior consistência no design de interfaces do sistema.</blockquote>
         </p>
       </div>
     </div>

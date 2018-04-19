@@ -29,7 +29,7 @@ export default {
             content: '';
             display: block;
             position: absolute;
-            background: #50fa7b;
+            background: #2BDBFF;
             width: 120px;
             height: 10px;
             left: 0;
