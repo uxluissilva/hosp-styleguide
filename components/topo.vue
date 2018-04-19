@@ -4,7 +4,7 @@
   <header>
     <div class="header container column align-items-center justify-content-center">
       <div class="block text-center">
-        <img src="~/assets/images/logo-benner.svg" class="logo" alt="">
+        <img src="~/static/logo-benner.svg" class="logo" alt="">
         <p>
           <blockquote>Styleguide do produto <strong>Hospitalar</strong> para maior consistência no design de interfaces do sistema.</blockquote>
         </p>
