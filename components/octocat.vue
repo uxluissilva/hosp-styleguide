@@ -2,7 +2,7 @@
 <div class="block-oct">
   <div class="oct">
     <a href="https://github.com/uxluissilva/redesign-styleguide" target="_blank">
-      <img src="~/assets/images/octocat.svg" alt="">
+      <img src="/assets/images/octocat.svg" alt="">
     </a>
   </div>
 </div>
