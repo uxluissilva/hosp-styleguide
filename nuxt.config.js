@@ -1,6 +1,6 @@
 module.exports = {
   router: {
-    base: 'hosp-styleguide/'
+    base: '~/'
   },
   css: [
     'node_modules/the-grid-flexbox/css/the-grid.min.css'
