@@ -2,12 +2,11 @@
 <div class="size margin">
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Colors</span>
-    </titleComponent>
+    <titleComponent :config="configColors" />
     <div class="container column">
-      
-      <h3 class="sub-title">Cores primárias</h3>
+
+      <titleComponent :config="configColors.primary" />
+
       <div class="container wrap">
         <div class="box-colors text-center container column align-items-center" v-for="x in colors.primary">
           <div class="box" :style="{ background: x.hex }"></div>
@@ -18,7 +17,8 @@
         </div>
       </div>
 
-      <h3 class="sub-title">Cores secundárias</h3>
+      <titleComponent :config="configColors.secondary" />
+
       <div class="container wrap">
         <div class="box-colors text-center container column align-items-center" v-for="x in colors.secondary">
           <div class="box" :style="{ background: x.hex }"></div>
@@ -29,8 +29,9 @@
         </div>
       </div>
 
-      <h3 class="sub-title">Cores complementares</h3>
-      <div class="container wrap">  
+      <titleComponent :config="configColors.comp" />
+
+      <div class="container wrap">
         <div class="box-colors text-center container column align-items-center" v-for="x in colors.complement">
           <div class="box" :style="{ background: x.hex }"></div>
           <div class="text">
@@ -43,9 +44,8 @@
   </div>
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Gradients</span>
-    </titleComponent>
+    <titleComponent :config="configGrad" />
+
     <div class="container column wrap">
       <!-- background: linear-gradient(10deg, #333, #222); -->
       <div v-for="x in gradients" class="flex-grow-1">
@@ -59,11 +59,10 @@
   </div>
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Shadows</span>
-    </titleComponent>
+    <titleComponent :config="configShadows" />
+
     <div class="container wrap">
-      <div class="box-shadow text-center container justify-content-center align-items-center" v-for="x in shadows" :style="{ boxShadow: '0 ' + '0 ' + x.size + 'px ' + x.smooth + 'px ' +  'rgba(0,0,0,.1)'}">
+      <div class="box-shadow text-center container justify-content-center align-items-center" v-for="x in shadows" :class="x.name">
         <div class="text container column">
           <strong>{{x.name}}</strong>
           <!-- <small style="font-size: 10px">box-shadow: 0 0 {{x.size}}px {{x.smooth}}px rgba(0,0,0,.1)</small> -->
@@ -86,6 +85,30 @@ export default {
   name: 'colors',
   data() {
     return {
+      configColors: {
+        order: 2,
+        text: "Cores",
+        primary: {
+          order: 3,
+          text: "Cores Primárias"
+        },
+        secondary: {
+          order: 3,
+          text: "Cores Secundárias"
+        },
+        comp: {
+          order: 3,
+          text: "Cores Complementares"
+        }
+      },
+      configGrad: {
+        order: 2,
+        text: "Gradientes"
+      },
+      configShadows: {
+        order: 2,
+        text: "Shadows"
+      },
       colors: {
         primary: [
           {
@@ -147,19 +170,25 @@ export default {
         ]
       },
       shadows: [{
-          name: 'Small',
-          size: 10,
-          smooth: 0
+          name: 'shadow-2dp'
         },
         {
-          name: 'Medium',
-          size: 20,
-          smooth: 5
+          name: 'shadow-3dp'
         },
         {
-          name: 'Large',
-          size: 30,
-          smooth: 10
+          name: 'shadow-4dp'
+        },
+        {
+          name: 'shadow-6dp'
+        },
+        {
+          name: 'shadow-8dp'
+        },
+        {
+          name: 'shadow-16dp'
+        },
+        {
+          name: 'shadow-24dp'
         }
       ],
       gradients: [{

@@ -2,9 +2,8 @@
 <div class="size margin">
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Calligraphy</span>
-    </titleComponent>
+    <titleComponent :config="config.cal" />
+
     <div class="container-font-example container column">
       <div class="font-example container wrap">
         <div class="flex-basis-100 flex-grow-1">
@@ -51,9 +50,8 @@
   </div>
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Typography</span>
-    </titleComponent>
+    <titleComponent :config="config.typ" />
+
     <div class="container-font-example container column">
       <div class="font-example container">
         <div class="flex-basis-100 flex-grow-1">
@@ -137,9 +135,8 @@
   </div>
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Paragraph</span>
-    </titleComponent>
+    <titleComponent :config="config.p" />
+
     <div class="container-font-example container column">
       <div class="font-example container">
         <div class="flex-basis-100 flex-grow-1">
@@ -207,9 +204,8 @@
   </div>
 
   <div class="">
-    <titleComponent>
-      <span slot="title">Font align</span>
-    </titleComponent>
+    <titleComponent :config="config.font" />
+
     <div class="container-font-example container column">
       <div class="font-example container wrap">
         <div class="flex-basis-400 flex-grow-3 container wrap justify-content-center align-items-center">
@@ -243,6 +239,24 @@ export default {
   },
   data() {
     return {
+      config: {
+        cal: {
+          order: 2,
+          text: "Caligrafia"
+        },
+        typ: {
+          order: 2,
+          text: "Tipografia"
+        },
+        p: {
+          order: 2,
+          text: "Parágrafo"
+        },
+        font: {
+          order: 2,
+          text: "Alinhamento"
+        }
+      },
       text: {
         font: {
           primary: "Arial",
