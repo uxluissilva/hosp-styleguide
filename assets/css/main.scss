@@ -1,10 +1,11 @@
 @import 'base/variables';
-@import 'base/text';
+@import 'base/material-shadows';
 @import 'base/base';
-@import 'base/colors';
-@import 'base/shadow';
-@import 'base/space';
-@import 'base/buttons';
+@import 'styleguide/text';
+@import 'styleguide/colors';
+@import 'styleguide/shadow';
+@import 'styleguide/space';
+@import 'styleguide/buttons';
 
 [v-cloak] {
   display: none;

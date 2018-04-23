@@ -2,9 +2,8 @@
 <div class="size margin">
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Grid</span>
-    </titleComponent>
+    <titleComponent :config="config" />
+    
     <div class="container">
       <div class="box-grid" v-for="(x, index) in 12">
         {{index + 1}}
@@ -24,7 +23,12 @@ export default {
   },
   name: 'grid',
   data() {
-    return {}
+    return {
+      config: {
+        order: 2,
+        text: "Grid"
+      }
+    }
   }
 }
 </script>

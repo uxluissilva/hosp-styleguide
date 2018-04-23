@@ -1,9 +1,13 @@
 <template>
 <div>
 
-  <div class="title padding-left-20 ">
-    <h2><slot name="title"></slot>.</h2>
+  <div class="title padding-left-20" v-if="config.order === 2">
+    <h2>{{ config.text }}</h2>
   </div>
+  <div class="sub-title padding-left-20" v-else-if="config.order === 3">
+    <h3>{{ config.text }}</h3>
+  </div>
+
 
 </div>
 </template>
@@ -13,10 +17,13 @@ export default {
   name: 'titleComponent',
   data() {
     return {
-
     }
   },
-  props: {},
+  props: {
+    config: {
+      type: Object
+    }
+  }
 }
 </script>
 

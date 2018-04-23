@@ -2,9 +2,8 @@
 <div class="size margin">
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Buttons</span>
-    </titleComponent>
+    <titleComponent :config="config" />
+    
     <div class="container column padding-top-20 border-box padding-20">
 
       <div class="container column esp flex-grow-1">
@@ -230,7 +229,12 @@ export default {
   },
   name: 'buttons',
   data() {
-    return {}
+    return {
+      config: {
+        order: 2,
+        text: "Botões"
+      }
+    }
   }
 }
 </script>

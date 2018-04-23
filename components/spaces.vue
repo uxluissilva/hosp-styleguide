@@ -2,9 +2,8 @@
 <div class="size margin">
 
   <div class="example">
-    <titleComponent>
-      <span slot="title">Spaces</span>
-    </titleComponent>
+    <titleComponent :config="config" />
+    
     <div class="container wrap padding-top-20 border-box padding-20">
       <div class="flex-basis-300 flex-grow-1 container column container-space">
         <strong>Margin (left, right, top, bottom)</strong>
@@ -81,7 +80,12 @@ export default {
   },
   name: 'spaces',
   data() {
-    return {}
+    return {
+      config: {
+        order: 2,
+        text: "Espaçamento"
+      }
+    }
   }
 }
 </script>
