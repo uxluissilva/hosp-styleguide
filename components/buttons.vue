@@ -1,7 +1,7 @@
 <template>
 <div class="size margin">
 
-  <div class="example">
+  <!-- <div class="example">
     <titleComponent :config="config" />
     
     <div class="container column padding-top-20 border-box padding-20">
@@ -210,8 +210,9 @@
 
         </tbody>
       </table>
-    </div>
-
+    </div> -->
+  
+  <buttonStd :config="buttonTest" />
 
   </div>
 
@@ -219,20 +220,25 @@
 </template>
 
 <script>
-import titleComponent from '@/components/titleComponent'
-import atomicButton from '@/components/btn/buttonComponent'
+import titleComponent from '@/components/titleComponent';
+import atomicButton from '@/components/btn/buttonComponent';
+import buttonStd from '@/components/btn/button-std';
 
 export default {
+  name: 'buttons',
   components: {
     titleComponent,
-    atomicButton
+    atomicButton,
+    buttonStd
   },
-  name: 'buttons',
   data() {
     return {
       config: {
         order: 2,
         text: "Botões"
+      },
+      buttonTest: {
+        style: ""
       }
     }
   }

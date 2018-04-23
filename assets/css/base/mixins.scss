@@ -1,0 +1,13 @@
+/*Toggle functions*/
+@mixin toggle-translate($dis: -2000px, $disY: 0, $sec: .58s, $form: ease-in-out) {
+  transform: translate($dis,$disY);
+  transition: $sec $form;
+}
+
+@mixin toggle-transition($sec: .58s, $form: ease-in-out) {
+  transition: $sec $form;
+}
+
+@mixin toggle-display() {
+  display: none;
+}

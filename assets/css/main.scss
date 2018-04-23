@@ -1,6 +1,11 @@
+/* Import items */
+/* base */
 @import 'base/variables';
 @import 'base/material-shadows';
+@import 'base/mixins';
 @import 'base/base';
+
+/* styleguide */
 @import 'styleguide/text';
 @import 'styleguide/colors';
 @import 'styleguide/shadow';
