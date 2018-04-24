@@ -1,9 +1,19 @@
 <template>
 <div class="size margin">
+  <div class="example">
+    <titleComponent :config="config.title" />
+
+    <buttonStd :config="config.button.normal" />
+    <buttonStd :config="config.button.totem" />
+    <buttonStd :config="config.button.small" />
+    <buttonStd :config="config.button.large" />
+    <buttonStd :config="config.button.stroke" />
+    <buttonStd :config="config.button.flat" />
+  </div>
 
   <!-- <div class="example">
     <titleComponent :config="config" />
-    
+
     <div class="container column padding-top-20 border-box padding-20">
 
       <div class="container column esp flex-grow-1">
@@ -211,11 +221,10 @@
         </tbody>
       </table>
     </div> -->
-  
-  <buttonStd :config="buttonTest" />
-
+    <div class="">
+      {{ config.ca }}
+    </div>
   </div>
-
 </div>
 </template>
 
@@ -234,11 +243,44 @@ export default {
   data() {
     return {
       config: {
-        order: 2,
-        text: "Botões"
-      },
-      buttonTest: {
-        style: ""
+        title: {
+          order: 2,
+          text: "Botões"
+        },
+        button: {
+          normal: {
+            style: "",
+            text: "Button"
+          },
+          totem: {
+            style: "totem",
+            text: "Atendimento"
+          },
+          small: {
+            style: "sm",
+            text: "Outros"
+          },
+          large: {
+            style: "lg",
+            text: "Participar"
+          },
+          stroke: {
+            style: "stk",
+            text: "Relatório"
+          },
+          flat: {
+            style: "flat",
+            text: "Login"
+          },
+          mods: {
+            dis: "disabled",
+            da: "danger",
+            ico: {
+              class: "icon",
+              name: "home"
+            }
+          }
+        }
       }
     }
   }
