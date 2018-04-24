@@ -3,10 +3,25 @@
   <div class="example">
     <titleComponent :config="config.title" />
 
+    <div class="buttons-styleguide container column">
+      <div class="buttons-type">
+        <titleComponent :config="config.subTitle.type" />
+        <div class="container column padding-20">
+          <p>O componente de botão utiliza o seguinte objeto.</p>
+          <pre>
+            <code class="javascript">
+config: {
+  style: String, // estilo do botão, default = "normal"
+  text: String, // texto do botão
+  mod: String, // modificador, ex: "alert"
+  icon: String // nome do ícone material-icons
+}
+            </code>
+          </pre>
+        </div>
+      </div>
 
-    <div class="buttons-styleguide container">
       <div class="buttons-block container column flex-grow-1">
-
         <titleComponent :config="config.subTitle.styles" />
 
         <div class="buttons-block__item container justify-content-between align-items-center padding-20">
@@ -116,31 +131,43 @@
     <div class="container column">
 
       <titleComponent :config="config.subTitle.alert" />
+      <div class="container column padding-left-20">
+        <span>&#38;.alert</span>
+      </div>
+
       <div class="container wrap padding-20">
-        <buttonStd :config="config.button.normal" :mod="config.button.mods.da"/>
+        <buttonStd :config="config.button.normalAlert"/>
         <pre>
           <code class="html">
-&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.da"&gt;
+&lt;buttonStd :config="config.button.normalAlert"&gt;
           </code>
         </pre>
       </div>
 
       <titleComponent :config="config.subTitle.disabled" />
+      <div class="container column padding-left-20">
+        <span>&#38;.disabled</span>
+      </div>
+
       <div class="container wrap padding-20">
-        <buttonStd :config="config.button.normal" :mod="config.button.mods.dis"/>
+        <buttonStd :config="config.button.normalDisabled"/>
         <pre>
           <code class="html">
-&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.dis"&gt;
+&lt;buttonStd :config="config.button.normalDisabled"&gt;
           </code>
         </pre>
       </div>
 
       <titleComponent :config="config.subTitle.icon" />
+      <div class="container column padding-left-20">
+        <span>&#38;.button-icon</span>
+      </div>
+
       <div class="container wrap padding-20">
-        <buttonStd :config="config.button.normal" :icon="config.button.ico"/>
+        <buttonStd :config="config.button.normalIcon"/>
         <pre>
           <code class="html">
-&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.ico"&gt;
+&lt;buttonStd :config="config.button.normalIcon"&gt;
           </code>
         </pre>
       </div>
@@ -172,6 +199,10 @@ export default {
           text: "Botões"
         },
         subTitle: {
+          type: {
+            order: 3,
+            text: "Componente - Object type"
+          },
           styles: {
             order: 3,
             text: "Tipos de botões"
@@ -214,13 +245,20 @@ export default {
             style: "flat",
             text: "Login"
           },
-          mods: {
-            dis: "disabled",
-            da: "alert",
+          normalAlert: {
+            style: "normal",
+            text: "Button",
+            mod: "alert"
           },
-          ico: {
-            class: "icon",
-            name: "settings"
+          normalDisabled: {
+            style: "normal",
+            text: "Button",
+            mod: "disabled"
+          },
+          normalIcon: {
+            style: "normal",
+            text: "Button",
+            icon: "settings"
           }
         }
       }

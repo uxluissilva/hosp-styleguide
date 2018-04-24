@@ -1,19 +1,19 @@
 <template>
 	<div class="">
-		<div class="button" v-if="!config.style && !mod && !icon">
+		<div class="button" v-if="!config.style && !config.mod && !config.icon">
 			<span>{{ config.text }}</span>
 		</div>
-		<div class="button" :class="'button-' + config.style" v-else-if="config.style && !mod && !icon">
+		<div class="button" :class="'button-' + config.style" v-else-if="config.style && !config.mod && !config.icon">
 			<span>{{ config.text }}</span>
 		</div>
-		<div class="button" :class="mod" v-else-if="!config.style && mod && !icon">
+		<div class="button" :class="mod" v-else-if="!config.style && config.mod && !config.icon">
 			<span>{{ config.text }}</span>
 		</div>
-		<div class="button" :class="'button-' + config.style + ' ' + mod" v-else-if="config.style && mod && !icon">
+		<div class="button" :class="'button-' + config.style + ' ' + config.mod" v-else-if="config.style && config.mod && !config.icon">
 			<span>{{ config.text }}</span>
 		</div>
-		<div class="button container align-items-center" :class="'button-' + config.style + ' ' + mod + ' button-' + icon.class" v-else-if="icon">
-			<i class="material-icons">{{ icon.name }}</i> <span>{{ config.text }}</span>
+		<div class="button container align-items-center" :class="'button-' + config.style + ' ' + config.mod + ' button-icon'" v-else-if="config.icon">
+			<i class="material-icons">{{ config.icon }}</i> <span>{{ config.text }}</span>
 		</div>
 	</div>
 </template>
@@ -24,12 +24,6 @@ export default {
 	},
 	props: {
 		config: {
-			type: Object
-		},
-		mod: {
-			type: String
-		},
-		icon: {
 			type: Object
 		}
 	},
