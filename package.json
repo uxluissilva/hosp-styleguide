@@ -12,6 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "material-icons": "^0.2.1",
     "nuxt": "^1.0.0-rc3"
   },
   "devDependencies": {

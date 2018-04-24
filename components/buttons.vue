@@ -3,227 +3,151 @@
   <div class="example">
     <titleComponent :config="config.title" />
 
-    <buttonStd :config="config.button.normal" />
-    <buttonStd :config="config.button.totem" />
-    <buttonStd :config="config.button.small" />
-    <buttonStd :config="config.button.large" />
-    <buttonStd :config="config.button.stroke" />
-    <buttonStd :config="config.button.flat" />
-  </div>
 
-  <!-- <div class="example">
-    <titleComponent :config="config" />
+    <div class="buttons-styleguide container">
+      <div class="buttons-block container column flex-grow-1">
 
-    <div class="container column padding-top-20 border-box padding-20">
+        <titleComponent :config="config.subTitle.styles" />
 
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Value</h4>
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Normal</span>
+            <span>.button</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+              <buttonStd :config="config.button.normal" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.normal"&gt;
+              </code>
+            </pre>
+          </div>
         </div>
-        <div class="esp container align-items-center">
-          <atomic-button value="Digite seu texto"></atomic-button>
+
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Totem</span>
+            <span>&#38;.button-totem</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+            <buttonStd :config="config.button.totem" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.totem"&gt;
+              </code>
+            </pre>
+          </div>
         </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="Digite seu texto"&gt;&lt;/atomic-button&gt;
-    </code>
-  </pre>
+
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Small</span>
+            <span>&#38;.button-small</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+            <buttonStd :config="config.button.small" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.small"&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Large</span>
+            <span>&#38;.button-large</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+            <buttonStd :config="config.button.large" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.large"&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Stroke</span>
+            <span>&#38;.button-stroke</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+            <buttonStd :config="config.button.stroke" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.stroke"&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div class="buttons-block__item container justify-content-between align-items-center padding-20">
+          <div class="container column align-center flex-basis-150">
+            <span>Flat</span>
+            <span>&#38;.button-flat</span>
+          </div>
+          <div class="button-example container flex-basis-300 justify-content-start align-items-center">
+            <buttonStd :config="config.button.flat" />
+          </div>
+          <div class="code-example container align-center">
+            <pre>
+              <code class="html">
+&lt;buttonStd :config="config.button.flat"&gt;
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Size</h4>
-        </div>
-        <div class="esp container wrap align-items-center">
-          <atomic-button value="Small" size="small"></atomic-button>
-          <atomic-button value="Medium" size="medium"></atomic-button>
-          <atomic-button value="Large" size="large"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="Small" size="small"&gt;
-&lt; atomic-button value="Medium" size="medium"&gt;
-&lt; atomic-button value="Large" size="large"&gt;
-    </code>
-  </pre>
-        </div>
+    <div class="container column">
+
+      <titleComponent :config="config.subTitle.alert" />
+      <div class="container wrap padding-20">
+        <buttonStd :config="config.button.normal" :mod="config.button.mods.da"/>
+        <pre>
+          <code class="html">
+&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.da"&gt;
+          </code>
+        </pre>
       </div>
 
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Type</h4>
-        </div>
-        <div class="esp container wrap align-items-center">
-          <atomic-button value="Default" type=""></atomic-button>
-          <atomic-button value="Primary" type="primary"></atomic-button>
-          <atomic-button value="Danger" type="danger"></atomic-button>
-          <atomic-button value="Warning" type="warning"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="Default" type=""&gt;
-&lt; atomic-button value="Primary" type="primary"&gt;
-&lt; atomic-button value="Danger" type="danger"&gt;
-&lt; atomic-button value="Warning" type="warning"&gt;
-    </code>
-  </pre>
-        </div>
+      <titleComponent :config="config.subTitle.disabled" />
+      <div class="container wrap padding-20">
+        <buttonStd :config="config.button.normal" :mod="config.button.mods.dis"/>
+        <pre>
+          <code class="html">
+&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.dis"&gt;
+          </code>
+        </pre>
       </div>
 
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Color</h4>
-        </div>
-        <div class="esp container align-items-center">
-          <atomic-button value="color: purple" color="purple"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="color: purple" color="purple"&gt;
-    </code>
-  </pre>
-        </div>
+      <titleComponent :config="config.subTitle.icon" />
+      <div class="container wrap padding-20">
+        <buttonStd :config="config.button.normal" :icon="config.button.ico"/>
+        <pre>
+          <code class="html">
+&lt;buttonStd :config="config.button.normal" :mod="config.button.mods.ico"&gt;
+          </code>
+        </pre>
       </div>
 
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Font-color</h4>
-        </div>
-        <div class="esp container align-items-center">
-          <atomic-button value="font-color: #fff" color="purple" font-color="#fff"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="font-color: #fff" color="purple" font-color="#fff"&gt;
-    </code>
-  </pre>
-        </div>
-      </div>
-
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Border-radius</h4>
-        </div>
-        <div class="esp container align-items-center">
-          <atomic-button value="Border Radius" border-radius="30px"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="Border Radius" border-radius="30px"&gt;
-    </code>
-  </pre>
-        </div>
-      </div>
-
-      <div class="container column esp flex-grow-1">
-        <div class="subtitle">
-          <h4>Width</h4>
-        </div>
-        <div class="esp container align-items-center">
-          <atomic-button value="Width: 300px" width="300px"></atomic-button>
-        </div>
-        <div class="ex-btn">
-          <pre>
-    <code class="html">
-&lt; atomic-button value="Width: 300px" width="300px"&gt;
-    </code>
-  </pre>
-        </div>
-      </div>
 
     </div>
 
-    <div class="table">
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <h4>Attribute</h4>
-            </th>
-            <th>
-              <h4>Type</h4>
-            </th>
-            <th>
-              <h4>Default</h4>
-            </th>
-            <th>
-              <h4>Options</h4>
-            </th>
-            <th>
-              <h4>Description</h4>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Value</td>
-            <td>String</td>
-            <td></td>
-            <td>Ex: "Texto do botão"</td>
-            <td>Texto dentro do botão</td>
-          </tr>
-
-          <tr>
-            <td>Size</td>
-            <td>String</td>
-            <td>Medium</td>
-            <td>small / medium / large</td>
-            <td>Define a proporção do botão</td>
-          </tr>
-
-          <tr>
-            <td>Type</td>
-            <td>String</td>
-            <td>Default</td>
-            <td>primary / danger</td>
-            <td>Define o tipo</td>
-          </tr>
-
-          <tr>
-            <td>Color</td>
-            <td>String</td>
-            <td>#ddd</td>
-            <td>Qualquer tipo de cor(red, #ff4455, rgb(23,154, 16))</td>
-            <td>Define a cor do background</td>
-          </tr>
-
-          <tr>
-            <td>Font-color</td>
-            <td>String</td>
-            <td>#333</td>
-            <td>Qualquer tipo de cor, Ex: (red, #ff4455, rgb(23,154, 16))</td>
-            <td>Define a cor da fonte</td>
-          </tr>
-
-          <tr>
-            <td>Border-radius</td>
-            <td>String</td>
-            <td>4px</td>
-            <td>Número + medida, Ex: (4px, 50%)</td>
-            <td>Define o radius da borda</td>
-          </tr>
-
-          <tr>
-            <td>Width</td>
-            <td>String</td>
-            <td></td>
-            <td>Número + medida, Ex: (200px, 100%)</td>
-            <td>Define o tamanho do botão</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div> -->
-    <div class="">
-      {{ config.ca }}
-    </div>
   </div>
 </div>
 </template>
@@ -246,6 +170,24 @@ export default {
         title: {
           order: 2,
           text: "Botões"
+        },
+        subTitle: {
+          styles: {
+            order: 3,
+            text: "Tipos de botões"
+          },
+          alert: {
+            order: 3,
+            text: "Alerta - danger"
+          },
+          disabled: {
+            order: 3,
+            text: "Desabilitado"
+          },
+          icon: {
+            order: 3,
+            text: "Ícones"
+          }
         },
         button: {
           normal: {
@@ -274,11 +216,11 @@ export default {
           },
           mods: {
             dis: "disabled",
-            da: "danger",
-            ico: {
-              class: "icon",
-              name: "home"
-            }
+            da: "alert",
+          },
+          ico: {
+            class: "icon",
+            name: "settings"
           }
         }
       }
@@ -288,6 +230,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.buttons-styleguide {
+  width: 100%;
+
+  .buttons-block {
+    .buttons-block__item {
+      width: 100%;
+
+      .button-example {
+
+      }
+    }
+  }
+}
+
 .ex-btn {
     padding-bottom: 100px;
 }
