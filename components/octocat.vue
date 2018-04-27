@@ -1,7 +1,7 @@
 <template>
 <div class="block-oct">
   <div class="oct">
-    <a href="https://github.com/uxluissilva/redesign-styleguide" target="_blank">
+    <a href="https://github.com/uxluissilva/hosp-styleguide" target="_blank">
       <img src="@/assets/images/octocat.svg" alt="">
     </a>
   </div>

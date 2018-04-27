@@ -33,6 +33,5 @@ export default {
 }
 </script>
 
-<style lang="scss" >
-@import '~assets/css/styleguide/buttons.scss';
+<style lang="scss" scoped>
 </style>
