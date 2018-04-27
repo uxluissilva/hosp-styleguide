@@ -1,7 +1,12 @@
+.dropdown___toggle {
+  @include toggle-transition(.18s);
+  transform: rotate(180deg);
+}
+
 .button {
+  display: flex;
   height: fit-content;
-  width: fit-content;
-  
+  width: fit-content;  
   background: $color-primary;
   font-size: $font-size-lg;
   text-align: center;
@@ -11,6 +16,7 @@
   cursor: pointer;
 
   a {
+    display: block;
     padding: 12px 30px;
     color: $color-white;
   }
@@ -19,14 +25,21 @@
   @include z-depth(4);
 
   &.button-icon {
+    position: relative;
 
-    span, i {
+    a, i {
+      vertical-align: middle;
+    }
+
+    a {
       margin: 0 -5px;
+      z-index: 4;
     }
 
     i {
-      vertical-align: middle;
-      margin-right: 17px;
+      margin: 0;
+      color: $color-white;
+      z-index: 2;
     }
   }
 

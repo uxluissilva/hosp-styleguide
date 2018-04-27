@@ -7,6 +7,7 @@
   <typography></typography>
   <colors></colors>
   <buttons></buttons>
+  <forms></forms>
   <grid></grid>
   <spaces></spaces>
 
@@ -20,6 +21,7 @@ import octocat from '@/components/octocat';
 import topo from '@/components/topo';
 
 import buttons from '@/components/buttons';
+import forms from '@/components/forms';
 import colors from '@/components/colors';
 import typography from '@/components/typography';
 import spaces from '@/components/spaces';
@@ -36,7 +38,8 @@ export default {
     spaces,
     grid,
     rodape,
-    buttons
+    buttons,
+    forms
   },
   data() {
     return {}

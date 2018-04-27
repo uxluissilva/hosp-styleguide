@@ -11,7 +11,10 @@
 @import 'styleguide/colors';
 @import 'styleguide/shadow';
 @import 'styleguide/space';
-@import 'styleguide/buttons';
+
+/* components */
+@import 'components/buttons';
+@import 'components/forms';
 
 [v-cloak] {
   display: none;

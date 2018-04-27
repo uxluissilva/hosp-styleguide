@@ -13,7 +13,10 @@
 			<a href="#!">{{ config.text }}</a>
 		</div>
 		<div class="button container align-items-center" :class="'button-' + config.style + ' ' + config.mod + ' button-icon'" v-else-if="config.icon">
-			<i class="material-icons">{{ config.icon }}</i> <a href="#!">{{ config.text }}</a>
+			<a href="#!">
+        <i class="material-icons">{{ config.icon }}</i>
+        {{ config.text }}
+      </a>
 		</div>
 	</div>
 </template>
@@ -33,5 +36,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 </style>
