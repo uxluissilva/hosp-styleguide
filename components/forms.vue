@@ -21,10 +21,20 @@
 
         <div class="forms-block__item form-field-ex">
           <titleComponent :config="config.subTitle.fields" />
-          
-          <div class="container column padding-40">
+
+          <div class="container column padding-20">
             <formField :config="config.fields.basic" />
             <formField :config="config.fields.placeholder" />
+          </div>
+
+          <div class="container wrap padding-20">
+            <selectField :config="config.fields.checkbox" class="margin-right-50" />
+            <selectField :config="config.fields.radio" class="margin-right-50" />
+            <selectField :config="config.fields.select" />
+          </div>
+
+          <div class="container column padding-20">
+
           </div>
         </div>
 
@@ -87,16 +97,16 @@ export default {
         },
         fields: {
           basic: {
-            style: "nm",
+            style: 0,
             label: "Nome completo"
           },
           placeholder: {
-            style: "nm",
+            style: 0,
             label: "Celular",
             placeholder: "(44) 9 9999-9999"
           },
           select: {
-            style: "nm",
+            style: 0,
             label: "Estado Civil",
             items: [
               "Solteiro(a)",
@@ -106,21 +116,31 @@ export default {
             ]
           },
           checkbox: {
-            style: "nm",
-            label: "Checkbox",
-            items: [
+            type: 0,
+            title: "Checkbox",
+            labels: [
               "Option 1",
               "Option 2",
               "Option 3"
             ]
           },
           radio: {
-            style: "nm",
-            label: "Checkbox",
-            items: [
+            type: 1,
+            title: "Radio",
+            labels: [
               "Option 1",
               "Option 2",
               "Option 3"
+            ]
+          },
+          select: {
+            type: 2,
+            title: "Estado Civil",
+            labels: [
+              "Solteiro(a)",
+              "Casado(a)",
+              "Divorciado(a)",
+              "Viúvo(a)"
             ]
           }
         }
