@@ -20,11 +20,25 @@
         </div>
 
         <div class="forms-block__item form-field-ex">
-          <titleComponent :config="config.subTitle.fields" />
+          <titleComponent :config="config.subTitle.search" />
 
           <div class="container column padding-20">
-            <formField :config="config.fields.basic" />
-            <formField :config="config.fields.placeholder" />
+            <searchField :config="config.fields.search" class="margin-right-20"/>
+          </div>
+        </div>
+
+        <div class="forms-block__item form-field-ex">
+          <titleComponent :config="config.subTitle.fields" />
+
+          <div class="container wrap padding-20">
+            <formField :config="config.fields.basic" class="margin-right-20"/>
+            <formField :config="config.fields.placeholder" class="margin-right-20" />
+            <formField :config="config.fields.percent" class="margin-right-20" />
+            <formField :config="config.fields.email" class="margin-right-20" />
+            <formField :config="config.fields.date" class="margin-right-20" />
+            <formField :config="config.fields.zipcode" class="margin-right-20" />
+            <formField :config="config.fields.cpf" class="margin-right-20" />
+            <formField :config="config.fields.rg" class="margin-right-20" />
           </div>
 
           <div class="container wrap padding-20">
@@ -50,13 +64,15 @@
 import titleComponent from '@/components/titleComponent';
 import formField from '@/components/forms/formField';
 import selectField from '@/components/forms/selectField';
+import searchField from '@/components/forms/searchField';
 
 export default {
   name: 'forms',
   components: {
     titleComponent,
     formField,
-    selectField
+    selectField,
+    searchField
   },
   data() {
     return {
@@ -96,14 +112,53 @@ export default {
           }
         },
         fields: {
+          search: {
+            style: "search",
+            label: "Pesquisar",
+            placeholder: "Digite aqui sua pesquisa...",
+            button: {
+              style: "",
+              text: "Pesquisar"
+            }
+          },
           basic: {
-            style: 0,
+            style: "text",
             label: "Nome completo"
           },
           placeholder: {
-            style: 0,
+            style: "phone",
             label: "Celular",
             placeholder: "(44) 9 9999-9999"
+          },
+          percent: {
+            style: "percent",
+            label: "Percentual",
+            placeholder: "0,00%"
+          },
+          email: {
+            style: "email",
+            label: "E-mail",
+            placeholder: "email@email.com"
+          },
+          date: {
+            style: "date",
+            label: "Data",
+            placeholder: "01/01/2018"
+          },
+          zipcode: {
+            style: "zipcode",
+            label: "CEP",
+            placeholder: "87050-000"
+          },
+          cpf: {
+            style: "cpf",
+            label: "CPF",
+            placeholder: "123.456.789-00"
+          },
+          rg: {
+            style: "rg",
+            label: "RG",
+            placeholder: "12.345.678-9"
           },
           select: {
             style: 0,

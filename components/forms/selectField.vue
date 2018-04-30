@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="select-block form-field container column" v-if="config.type === 2">
-			<label for="" class="select-block__label">{{ config.title }}</label>
+			<label for="" class="select-block__label form-field__label">{{ config.title }}</label>
 			<div class="form-field__select">
 				<input type="text" class="select-input form-field__input" :value="selectList.selectItem">
 				<ul class="select-list" v-bind:class="{ 'select-list___open' : selectList.list}">
@@ -32,8 +32,6 @@
 				<i class="material-icons select-icon" @click="toggleSelect()">arrow_drop_down</i>
 			</div>
 		</div>
-
-
 	</div>
 </template>
 
@@ -54,13 +52,11 @@ export default {
 			toggleCheck(e) {
 				let elem = e.target.previousSibling,
 						list = e.target.offsetParent.parentNode;
-
 				if(elem.type === "radio") {
 					Array.from(list).map(i => {
 						i.checked = false;
 					});
 				}
-
 				return elem.checked ? elem.checked = false : elem.checked = true;
 			},
 			toggleSelect() {
@@ -72,10 +68,6 @@ export default {
 				this.selectList.selectItem = c;
 				this.toggleSelect();
 			}
-		}
-	},
-	watch() {
-		return {
 		}
 	}
 }

@@ -6,7 +6,8 @@ O projeto tem como referência o modelo de layout que está sendo desenvolvido p
 ## Conteúdo
 As referências de design devem ser objetivas e se possível, de fácil entendimento, para que o conteúdo seja o mais acessível possível para desenvolvedores, gestores e designers.
 
-
+### Tecnologias utilizadas
+- [Text mask](https://github.com/text-mask/text-mask)
 
 ## Contribuir para o styleguide
 Para manutenção e contribuição do Styleguide, de modo a manter a documentação sempre atualizada, copie o projeto para sua máquina.
