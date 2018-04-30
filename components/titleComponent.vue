@@ -7,6 +7,15 @@
   <div class="sub-title padding-left-20" v-else-if="config.order === 3">
     <h3>{{ config.text }}</h3>
   </div>
+  <div class="sub-title padding-left-20" v-else-if="config.order === 4">
+    <h4>{{ config.text }}</h4>
+  </div>
+  <div class="sub-title padding-left-20" v-else-if="config.order === 5">
+    <h5>{{ config.text }}</h5>
+  </div>
+  <div class="sub-title padding-left-20" v-else-if="config.order === 6">
+    <h6>{{ config.text }}</h6>
+  </div>
 
 
 </div>

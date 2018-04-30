@@ -40,6 +40,18 @@
           </div>
         </div>
       </div>
+
+      <titleComponent :config="configColors.bw" />
+
+      <div class="container wrap">
+        <div class="box-colors text-center container column align-items-center" v-for="x in colors.blackWhite">
+          <div class="box" :style="{ background: x.hex }"></div>
+          <div class="text">
+            <strong>{{x.name}}</strong>
+            <p><small>{{x.hex}}</small></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -99,6 +111,10 @@ export default {
         comp: {
           order: 3,
           text: "Cores Complementares"
+        },
+        bw: {
+          order: 3,
+          text: "Black & White"
         }
       },
       configGrad: {
@@ -154,6 +170,12 @@ export default {
           {
             name: 'Alert',
             hex: '#f2994a'
+          }
+        ],
+        blackWhite: [
+          {
+            name: 'Black',
+            hex: '#333333'
           },
           {
             name: 'Dark',
@@ -166,6 +188,10 @@ export default {
           {
             name: 'White',
             hex: '#f2f2f2'
+          },
+          {
+            name: 'White-light',
+            hex: '#ffffff'
           }
         ]
       },
@@ -198,7 +224,7 @@ export default {
         },
         {
           name: 'Dark',
-          color: '#4f4f4f',
+          color: '#808e95',
           color2: '#000000'
         },
         {

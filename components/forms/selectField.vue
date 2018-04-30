@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="checkbox-block container column flex-grow-1" v-if="config.type === 0">
-			<h3 class="checkbox-block__title">{{ config.title }}</h3>
+			<h4 class="checkbox-block__title">{{ config.title }}</h4>
 			<div class="checkboxes" v-for="label in config.labels">
 				<label for="" class="checkboxes__label" @click="toggleCheck($event)">
 					<input type="checkbox" class="checkboxes__input">
@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="radio-block container column flex-grow-1" v-else-if="config.type === 1">
-			<h3 class="radio-block__title">{{ config.title }}</h3>
+			<h4 class="radio-block__title">{{ config.title }}</h4>
 			<form action="" class="radio-button">
 				<div class="radio-button__item" v-for="label in config.labels">
 					<label for="" class="radio-button__label" @click="toggleCheck($event)">

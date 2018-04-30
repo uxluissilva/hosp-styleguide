@@ -59,7 +59,7 @@
             <li>
               <h4>Heading 1</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 44px</li>
+            <li><strong>Font size:</strong> 54px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -72,7 +72,7 @@
             <li>
               <h4>Heading 2</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 36px</li>
+            <li><strong>Font size:</strong> 44px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -85,7 +85,7 @@
             <li>
               <h4>Heading 3</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 24px</li>
+            <li><strong>Font size:</strong> 36px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -98,7 +98,7 @@
             <li>
               <h4>Heading 4</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 18px</li>
+            <li><strong>Font size:</strong> 24px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -111,7 +111,7 @@
             <li>
               <h4>Heading 5</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 16px</li>
+            <li><strong>Font size:</strong> 18px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -124,7 +124,7 @@
             <li>
               <h4>Heading 6</h4></li>
             <li><strong>Font family:</strong> {{text.font.primary}}</li>
-            <li><strong>Font size:</strong> 14px</li>
+            <li><strong>Font size:</strong> 16px</li>
           </ul>
         </div>
         <div class="flex-basis-400 flex-grow-2">
@@ -142,7 +142,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>b.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <b>Almost before we knew it, we had left the ground.</b>
         </div>
       </div>
@@ -151,7 +151,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>p.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <p>Almost before we knew it, we had left the ground.</p>
         </div>
       </div>
@@ -160,7 +160,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>small.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <small>Almost before we knew it, we had left the ground.</small>
         </div>
       </div>
@@ -169,7 +169,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>span.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <span>Almost before we knew it, we had left the ground.</span>
         </div>
       </div>
@@ -178,7 +178,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>i.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <i>Almost before we knew it, we had left the ground.</i>
         </div>
       </div>
@@ -187,7 +187,7 @@
         <div class="flex-basis-100 flex-grow-1">
           <h4>u.</h4>
         </div>
-        <div class="flex-basis-400 flex-grow-2">
+        <div class="flex-basis-400 flex-grow-2 font-size">
           <u>Almost before we knew it, we had left the ground.</u>
         </div>
       </div>

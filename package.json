@@ -12,24 +12,24 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "material-icons": "^0.2.1",
-    "nuxt": "^1.0.0-rc3",
+    "material-icons": "^0.2.2",
+    "nuxt": "^1.4.0",
     "text-mask-addons": "^3.7.2",
-    "vue-text-mask": "^6.0.2"
+    "vue-text-mask": "^6.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.3.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.1.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "node-sass": "^4.5.3",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "node-sass": "^4.9.0",
     "push-dir": "^0.4.1",
-    "sass-loader": "^6.0.6",
-    "the-grid-flexbox": "^1.0.1"
+    "sass-loader": "^7.0.1",
+    "the-grid-flexbox": "^2.0.1"
   }
 }

@@ -87,27 +87,27 @@ export default {
             text: "Lista de componentes"
           },
           fields: {
-            order: 3,
+            order: 4,
             text: "Form field - campo texto"
           },
           search: {
-            order: 3,
+            order: 4,
             text: "Campo de pesquisa"
           },
           selectBoxes: {
-            order: 3,
+            order: 4,
             text: "Campos de seleção - checkbox, radio & select"
           },
           table: {
-            order: 3,
+            order: 4,
             text: "Tabelas - Grids"
           },
           mask: {
-            order: 3,
+            order: 4,
             text: "Máscara para preenchimento"
           },
           validation: {
-            order: 3,
+            order: 4,
             text: "Validação de formulários"
           }
         },

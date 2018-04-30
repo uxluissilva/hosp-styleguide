@@ -208,15 +208,15 @@ export default {
             text: "Tipos de botões"
           },
           alert: {
-            order: 3,
+            order: 4,
             text: "Alerta - danger"
           },
           disabled: {
-            order: 3,
+            order: 4,
             text: "Desabilitado"
           },
           icon: {
-            order: 3,
+            order: 4,
             text: "Ícones"
           }
         },
