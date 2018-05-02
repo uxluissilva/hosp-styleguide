@@ -39,16 +39,17 @@
             <formField :config="config.fields.zipcode" class="margin-right-20" />
             <formField :config="config.fields.cpf" class="margin-right-20" />
             <formField :config="config.fields.rg" class="margin-right-20" />
+            <formField :config="config.fields.aera" class="margin-right-20" />
           </div>
+        </div>
+
+        <div class="forms-block__item form-field-ex">
+          <titleComponent :config="config.subTitle.selectBoxes" />
 
           <div class="container wrap padding-20">
             <selectField :config="config.fields.checkbox" class="margin-right-50" />
             <selectField :config="config.fields.radio" class="margin-right-50" />
             <selectField :config="config.fields.select" />
-          </div>
-
-          <div class="container column padding-20">
-
           </div>
         </div>
 
@@ -159,6 +160,11 @@ export default {
             style: "rg",
             label: "RG",
             placeholder: "12.345.678-9"
+          },
+          area: {
+            style: "textarea",
+            label: "Texto",
+            placeholder: "Insira seu texto aqui"
           },
           select: {
             style: 0,

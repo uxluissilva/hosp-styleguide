@@ -12,6 +12,13 @@ TODO:
 				:name="config.name"
 				:placeholder="config.placeholder" />
 		</div>
+		<div class="form-field container column" v-if="config.style === 'textarea'">
+			<label for="" class="form-field__label">{{ config.label }}</label>
+			<textarea class="form-field__input"
+				:type="config.type"
+				:name="config.name"
+				:placeholder="config.placeholder" />
+		</div>
 		<div class="form-field container column" v-else-if="config.style === 'phone'">
 			<label for="" class="form-field__label">{{ config.label }}</label>
 			<masked-input class="form-field__input"
